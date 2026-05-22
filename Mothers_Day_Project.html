@@ -13,31 +13,50 @@
             button {
                 text-align: center;
             }
+            a {
+                text-align: center;
+            }
+            body {
+                background-color: pink;
+            }
         </style>
         <title>
-            Happy Mother's Day!
+            Happy Birthday Mom!
         </title>
     </head>
     <body>
         <h1>
-            Happy Mother's Day!
+            Happy Birthday Mom!
         </h1>
         <p>
             Click this button for a suprise!
         </p>
         <div>
-            <button onclick="showText()">
+            <button onclick="toggleText()">
                 Click me!
             </button>
             <p id="myMessage" style="display:none;">
-                I love you Mom I hope you had a wonderful day!
+                I love you Mom I hope you had a wonderful day! <br> You are the best mom in the whole world and <br> I am so grateful to have you as my mom!
             </p>
             <script>
-                function showText() {
-                    if document.getElementById("myMessage") = style="display:none;"
-                        document.getElementById("myMessage").style.display = "block";
+                function toggleText() {
+                    var message = document.getElementById("myMessage");
+                    var image = document.getElementById("myImage");
+                    if (message.style.display === "none") {
+                        message.style.display = "block";
+                    } else {
+                        message.style.display = "none";
+                    }
+                    if (image.style.display === "none") {
+                        image.style.display = "block";
+                    } else {
+                        image.style.display = "none";
+                    }
                 }
             </script>
+            <a id="myImage" style="display:none;">
+                <img src="https://t3.ftcdn.net/jpg/04/29/82/96/360_F_429829690_ftoNnYe5r5dk3f8hcGnZnCOSDiiSc5f7.jpg" alt=" Image" style="width: 1000px;height:300px;">
+            </a>
         </div>
     </body>
 </html>
